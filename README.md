@@ -7,7 +7,7 @@ Models are primarily Linear Regression Models, Lasso & Ridge
 Evaluation Parameter : RMSE
 
 
-Link: https://www.kaggle.com/c/dsi-us-8-project-2-regression-challenge/data
+Link to the data set & description: https://www.kaggle.com/c/dsi-us-8-project-2-regression-challenge/data
 
 
 Why is this analysis important?
