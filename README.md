@@ -36,7 +36,7 @@ From the original saved notebook outputs (not re-scored on Kaggle):
 - Ridge ≈ 0.902, ordinary least squares ≈ 0.902.
 - Hold-out RMSE for the log-linear model on 10% of training rows ≈ **18,208**.
 
-Re-running today can produce slightly different numeric output because pandas 2.x / scikit-learn 1.x are not the 2019 stack. Treat the numbers above as the historical record.
+Re-executed on Python 3.12.3 with `requirements.txt`. Local metrics matched those saved 2019 outputs (Lasso CV **0.91085**, hold-out RMSE **~18,208**). That is a reproducibility check only, not a new Kaggle submission.
 
 ## Data source
 
@@ -75,6 +75,7 @@ python -m jupyter nbconvert --to notebook --execute "Regression & EDA.ipynb" \
 The notebook is the original analysis with the smallest changes needed to run on current pandas / seaborn / scikit-learn:
 
 - `DataFrame.corr(numeric_only=True)` (pandas 2 no longer silently skips object columns)
+- CSV loading keeps the Ames `"None"` masonry-veneer category (pandas 2 would otherwise treat `"None"` as missing and drop the column)
 - `DataFrame.drop(..., axis=1)` / `pd.concat(..., axis=1)` instead of the positional `1`
 - `Series.ffill()` instead of `fillna(method="ffill")`
 - `sns.histplot(..., kde=True)` instead of removed `sns.distplot`
