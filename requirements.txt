@@ -1,0 +1,13 @@
+# Pinned to versions that execute Regression & EDA.ipynb on Python 3.10–3.12.
+# Verified with Python 3.12.3.
+numpy==1.26.4
+pandas==2.2.2
+matplotlib==3.8.4
+seaborn==0.13.2
+scikit-learn==1.4.2
+# IPython 9 removed IPython.core.pylabtools.backend2gui; matplotlib 3.8 still imports it.
+ipython==8.27.0
+jupyter==1.0.0
+nbconvert==7.16.4
+ipykernel==6.29.5
+nbformat==5.10.4
